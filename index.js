@@ -7,6 +7,10 @@ function getWordCount(text) {
   return text.trim().split(" ").length;
 }
 
+function getCharacterCount(text) {
+  return text.length;
+}
+
 function printHelpMessage() {
   console.log(
     `Usage: text-statistics "<Text>" 
@@ -14,7 +18,7 @@ function printHelpMessage() {
     text-statistics "Hello World. This is a test." 
     
     Output: 
-    "The number of words in "Hello World. This is a test." is: 6`
+    "The number of words in "Hello World. This is a test." is: 6 and the number of characters is: 28.`
   );
 }
 
@@ -30,5 +34,7 @@ if (userArguments[0] === "--help" || userArguments[0] === "-h") {
 }
 
 console.log(
-  `The number of words in ${userArguments} is ${getWordCount(userArguments[0])}`
+  `The number of words in "${userArguments[0]}" is: ${getWordCount(
+    userArguments[0]
+  )} and the number of characters is: ${getCharacterCount(userArguments[0])}`
 );
