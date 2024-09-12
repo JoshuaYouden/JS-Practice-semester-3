@@ -1,7 +1,6 @@
 #!/usr/bin/env node
 
 const process = require("node:process");
-import process from "node:process";
 
 function getWordCount(text) {
   return text.trim().split(" ").length;
